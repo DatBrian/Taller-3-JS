@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 3 JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <main class="allContent">
+    <section class="primerPaso position-relative">
+        <div class="containerFirst">
+            <h2>¿Eres Trainer o camper?</h2>
+            <form class="firstForm">
+                <select name="tipo" id="tipoP" class="form-select">
+                    <option selected disabled>Trainer o Camper?</option>
+                    <option value="trainer">Trainer</option>
+                    <option value="camper">Camper</option>
+                </select>
+            </form><br>
+            <h2>Añadir:</h2>
+            <form class="secondForm">
+                <select name="añadir" id="añadir" class="form-select">
+                    <option >¿Que vas a añadir?</option>
+                    <option value="sedes">Nueva Sede</option>
+                    <option value="niveles">Niveles</option>
+                    <option value="tecnologias">Tecnologías</option>
+                    <option value="teams">Teams</option>
+                    <option value="roadMap">Road Map</option>
+                </select>
+            </form>
+        </div>
+    </section><br>
+    <section class="campersSection">
+        <div class="container2">
+        <form id="formCampers">
+            <div class="contactoCampers">
+            <h2>Contacto</h2>
+            <label for=".nombreInput" class="form-label text-light fs-4">Ingrese su nombre:</label>
+            <input type="text" placeholder="Name" class="nombreInput form-control"><br>
+            <label for=".telefonoInput" class="form-label text-light fs-4">Ingrese su teléfono:</label>
+            <input type="tel" placeholder="Phone" class="telefonoInput form-control"><br>
+            <label for=".emailInput" class="form-label text-light fs-4">Ingrese su Email:</label>
+            <input type="email" placeholder="Email" class="emailInput form-control"><br>
+            <h2>Dirección</h2>
+            <label for=".direccionInput" class="form-label text-light fs-4">Ingrese su dirección:</label>
+            <input type="text" placeholder="Calle 58..." class="direccionInput form-control"><br>
+            <label for=".barrioInput" class="form-label text-light fs-4">Ingrese su Barrio:</label>
+            <input type="text" placeholder="Barrio" class="barrioInput form-control"><br>
+            <label for=".transporteInput" class="form-label text-light fs-4">Ingrese su medio de transporte:</label>
+            <input type="text" placeholder="Auto, moto, bus..." class="transporteInput form-control"><br>
+            <button type="button" class="previous1 btn btn-light">Anterior</button>
+            <button type="button" class="next1 btn btn-light">Siguiente</button>
+            </div>
+            <div class="campusCampers">
+            <h2>Información de Campus</h2>
+            <label for=".teamInput" class="form-label text-light fs-4">Ingrese el team al que pertenece:</label>
+            <input type="number" placeholder="1, 2, 3..." class="teamInput form-control"><br>
+            <label class="form-label text-light fs-4">Sede a la que pertenece</label>
+            <input type="text" placeholder="Ciudad" class="ciudadSedeC form-control">
+            <input type="text" placeholder="Dirección" class="direccionSedeC form-control">
+            <input type="tel" placeholder="Teléfono" class="telefonoSedeC form-control">
+            <h2>Horarios</h2>
+            <select name="clases" id="clases" class="form-select">
+                <option value="none">Clase</option>
+                <option value="skills">Software Skills</option>
+                <option value="ingles">Inglés</option>
+                <option value="ser">Ser</option>
+            </select>
+
+            <select name="diasC" id="diasC" class="diasC form-select">
+                <option value="none">dia</option>
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miercoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+            </select>
+                <div class="softwareSkills">
+                <div class="lunesC">
+                <h3>Software Skills</h3>
+                <H3>Lunes</H3>
+                <label for=".horaLunesTeamC" class="form-label text-light fs-4">Ingrese la hora del día lunes:</label>
+                <input type="time" placeholder="Hora" class="horaLunesTeamC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonLunesTeamC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonLunesTeamC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonLunesTeamC form-control"><br>
+                </div>
+                <div class="martesC">
+                <H3>Martes</H3>
+                <label for=".horaTeamc" class="form-label text-light fs-4">Ingrese la hora del día martes:</label>
+                <input type="time" placeholder="Hora" class="horaMartesTeamC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonMartesTeamC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonMartesTeamC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonMartesTeamC form-control"><br>
+                </div>
+                <div class="miercolesC">
+                <H3>Miercoles</H3>
+                <label for=".horaTeamC" class="form-label text-light fs-4">Ingrese la hora del día miercoles:</label>
+                <input type="time" placeholder="Hora" class="horaMiercolesTeamC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonMiercolesTeamC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonMiercolesTeamC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonMiercolesTeamC form-control"><br>
+                </div>
+                <div class="juevesC">
+                <H3>Jueves</H3>
+                <label for=".horaTeamC" class="form-label text-light fs-4">Ingrese la hora del día jueves:</label>
+                <input type="time" placeholder="Hora" class="horaJuevesTeamC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonJuevesTeamC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonJuevesTeamC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonJuevesTeamC form-control"><br>
+                </div>
+                <div class="viernesC">
+                <H3>Viernes</H3>
+                <label for=".horaTeamC" class="form-label text-light fs-4">Ingrese la hora del día viernes:</label>
+                <input type="time" placeholder="Hora" class="horaViernesTeamC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonViernesTeamC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonViernesTeamC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonViernesTeamC form-control"><br><br>
+                </div>
+            </div>
+            <select name="diasIC" id="diasIC" class="diasIC form-select">
+                <option value="none">dia</option>
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miercoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+            </select>
+            <div class="claseIngles">
+                <div class="lunesIC">
+                <h3>Clase de Inglés</h3>
+                <H3>Lunes</H3>
+                <label for=".horaLunesTeamIC" class="form-label text-light fs-4">Ingrese la hora del día lunes:</label>
+                <input type="time" placeholder="Hora" class="horaLunesTeamIC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonLunesTeamIC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonLunesTeamIC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonLunesTeamIC form-control"><br>
+                </div>
+                <div class="martesIC">
+                <H3>Martes</H3>
+                <label for=".horaTeamIc" class="form-label text-light fs-4">Ingrese la hora del día martes:</label>
+                <input type="time" placeholder="Hora" class="horaMartesTeamIC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonMartesTeamIC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonMartesTeamIC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonMartesTeamIC form-control"><br>
+                </div>
+                <div class="miercolesIC">
+                <H3>Miercoles</H3>
+                <label for=".horaTeamIC" class="form-label text-light fs-4">Ingrese la hora del día miercoles:</label>
+                <input type="time" placeholder="Hora" class="horaMiercolesTeamIC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonMiercolesTeamIC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonMiercolesTeamIC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonMiercolesTeamIC form-control"><br>
+                </div>
+                <div class="juevesIC">
+                <H3>Jueves</H3>
+                <label for=".horaTeamIC" class="form-label text-light fs-4">Ingrese la hora del día jueves:</label>
+                <input type="time" placeholder="Hora" class="horaJuevesTeamIC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonJuevesTeamIC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonJuevesTeamIC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonJuevesTeamIC form-control"><br>
+                </div>
+                <div class="viernesIC">
+                <H3>Viernes</H3>
+                <label for=".horaTeamIC" class="form-label text-light fs-4">Ingrese la hora del día viernes:</label>
+                <input type="time" placeholder="Hora" class="horaViernesTeamIC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonViernesTeamIC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonViernesTeamIC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonViernesTeamIC form-control"><br><br>
+                </div>
+            </div>
+            <select name="diasSC" id="diasSC" class="diasSC form-select">
+                <option value="none">dia</option>
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miercoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+            </select>
+            <div class="claseSer">
+                <h3>Clase de ser</h3>
+                <H3>Lunes</H3>
+                <label for=".horaLunesTeamSC" class="form-label text-light fs-4">Ingrese la hora del día lunes:</label>
+                <input type="time" placeholder="Hora" class="horaLunesTeamSC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonLunesTeamSC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonLunesTeamSC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonLunesTeamSC form-control"><br>
+    
+                <H3>Martes</H3>
+                <label for=".horaTeamSc" class="form-label text-light fs-4">Ingrese la hora del día martes:</label>
+                <input type="time" placeholder="Hora" class="horaMartesTeamSC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonMartesTeamSC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonMartesTeamSC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonMartesTeamSC form-control"><br>
+    
+                <H3>Miercoles</H3>
+                <label for=".horaTeamSC" class="form-label text-light fs-4">Ingrese la hora del día miercoles:</label>
+                <input type="time" placeholder="Hora" class="horaMiercolesTeamSC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonMiercolesTeamSC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonMiercolesTeamSC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonMiercolesTeamSC form-control"><br>
+    
+                <H3>Jueves</H3>
+                <label for=".horaTeamSC" class="form-label text-light fs-4">Ingrese la hora del día jueves:</label>
+                <input type="time" placeholder="Hora" class="horaJuevesTeamSC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonJuevesTeamSC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonJuevesTeamSC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonJuevesTeamSC form-control"><br>
+    
+                <H3>Viernes</H3>
+                <label for=".horaTeamSC" class="form-label text-light fs-4">Ingrese la hora del día viernes:</label>
+                <input type="time" placeholder="Hora" class="horaViernesTeamSC form-control"><br>
+                <label class="form-label text-light fs-4">Salón:</label>
+                <input type="text" placeholder="Nombre" class="nombreSalonViernesTeamSC form-control">
+                <input type="number" placeholder="Número" class="numeroSalonViernesTeamSC form-control">
+                <input type="number" placeholder="Piso" class="pisoSalonViernesTeamSC form-control"><br><br>
+            </div>
+            <button type="button" class="previous2 btn btn-light">Anterior</button>
+            <button type="button" class="next2 btn btn-light">Siguiente</button>
+            </div>
+            <div class="nivelesCampers">
+            <h2>Niveles</h2>
+            <label for=".nivelInput" class="form-label text-light fs-4">Ingrese su nivel actual:</label>
+            <input type="text" placeholder="Nivel:" class="nivelInput form-control"><br>
+            <label for=".prerrequisitoInput" class="form-label text-light fs-4">Ingrese los prerrequisitos:</label>
+            <input type="text" placeholder="Prerrequisito:" class="prerrequisitoInput form-control"><br>
+            <label for=".tecnologiaInput" class="form-label text-light fs-4">Tecnologia a la que pertenece:</label>
+            <input type="text" placeholder="tecnologia:" class="tecnologiaInput form-control">
+            <select name="tecnologiaTipo" id="tecnologiaTipo" class="form-select">
+                <option selected disabled>Tipo de tecnología</option>
+                <option value="Electiva">Electiva</option>
+                <option value="Obligatoria">Obligatoria</option>
+            </select>
+            <label for=".roadMapInput" class="form-label text-light fs-4">RoadMap:</label>
+            <input type="number" placeholder="Créditos:" class="creditosRMInput form-control">
+            <input type="" placeholder="Año:" class="añoRMInput form-control">
+            <input type="number" placeholder="Asignaturas:" class="asignaturasRMInput form-control"><br>
+            <button type="button" class="previous3 btn btn-light">Anterior</button>
+            <input type="submit" placeholder="Enviar" class="enviar btn btn-light">
+            </div>
+        </form>
+        </div>
+    </section>
+    <section class="trainersSection">
+        <div class="container3">
+        <form id="formTrainers">
+            <div class="contactoTrainers">
+            <h2>Contacto</h2>
+            <label for=".nombreInputT" class="form-label text-light fs-4">Ingrese su nombre:</label>
+            <input type="text" placeholder="Name" class="nombreInputT form-control"><br>
+            <label for=".telefonoInputT" class="form-label text-light fs-4">Ingrese su teléfono:</label>
+            <input type="tel" placeholder="Phone" class="telefonoInputT form-control"><br>
+            <label for=".emailInputT" class="form-label text-light fs-4">Ingrese su Email:</label>
+            <input type="email" placeholder="Email" class="emailInputT form-control"><br>
+            <button type="button" class="previous1T btn btn-light">Previous</button>
+            <button type="button" class="next1T btn btn-light">Siguiente</button>
+            </div>
+            <div class="campusTrainers">
+            <hr><h2>Información de Campus</h2>
+            <label for=".ciudadSedeT" class="form-label text-light fs-4">Ingrese la ciudad de la sede:</label>
+            <input type="text" placeholder="Bucaramanga, Bogota..." class="ciudadSedeT form-control"><br>
+            <label for=".direccionSedeT" class="form-label text-light fs-4">Ingrese la dirección de la sede:</label>
+            <input type="text" placeholder="Calle 58..." class="direccionSedeT form-control"><br>
+            <label for=".telefonoSedeT" class="form-label text-light fs-4">Ingrese el teléfono de la sede:</label>
+            <input type="tel" placeholder="Teléfono" class="telefonoSedeT form-control"><br>
+            <label for=".teamInputT" class="form-label text-light fs-4">Ingrese el team al que pertenece:</label>
+            <input type="number" placeholder="1, 2, 3..." class="teamInputT form-control"><br>
+            <h2 class="fs-4">Horarios</h2>
+
+            <select name="diasT" id="diasT" class="diasT form-select">
+                <option value="none">dia</option>
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miercoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+            </select>
+            <div class="lunesT">
+            <H3>Lunes</H3>
+            <label for=".horaLunesTeamT" class="form-label text-light fs-4">Ingrese la hora del día lunes:</label>
+            <input type="time" placeholder="Hora" class="horaLunesTeamT form-control"><br>
+            <label class="form-label text-light fs-4">Salón:</label>
+            <input type="number" placeholder="Número" class="numeroSalonLunesTeamT form-control">
+            <input type="number" placeholder="Piso" class="pisoSalonLunesTeamT form-control"><br>
+            </div><div class="martesT">
+            <H3>Martes</H3>
+            <label for=".horaTeamT" class="form-label text-light fs-4">Ingrese la hora del día martes:</label>
+            <input type="time" placeholder="Hora" class="horaMartesTeamT form-control"><br>
+            <label class="form-label text-light fs-4">Salón:</label>
+            <input type="number" placeholder="Número" class="numeroSalonMartesTeamT form-control">
+            <input type="number" placeholder="Piso" class="pisoSalonMartesTeamT form-control"><br>
+            </div><div class="miercolesT">
+            <H3>Miercoles</H3>
+            <label for=".horaTeamT" class="form-label text-light fs-4">Ingrese la hora del día miercoles:</label>
+            <input type="time" placeholder="Hora" class="horaMiercolesTeamT form-control"><br>
+            <label class="form-label text-light fs-4">Salón:</label>
+            <input type="number" placeholder="Número" class="numeroSalonMiercolesTeamT form-control">
+            <input type="number" placeholder="Piso" class="pisoSalonMiercolesTeamT form-control"><br>
+            </div><div class="juevesT">
+            <H3>Jueves</H3>
+            <label for=".horaTeamT" class="form-label text-light fs-4">Ingrese la hora del día jueves:</label>
+            <input type="time" placeholder="Hora" class="horaJuevesTeamT form-control"><br>
+            <label class="form-label text-light fs-4">Salón:</label>
+            <input type="number" placeholder="Número" class="numeroSalonJuevesTeamT form-control">
+            <input type="number" placeholder="Piso" class="pisoSalonJuevesTeamT form-control"><br>
+            </div><div class="viernesT">
+            <H3>Viernes</H3>
+            <label for=".horaTeamT" class="form-label text-light fs-4">Ingrese la hora del día viernes:</label>
+            <input type="time" placeholder="Hora" class="horaViernesTeamT form-control"><br>
+            <label class="form-label text-light fs-4">Salón:</label>
+            <input type="number" placeholder="Número" class="numeroSalonViernesTeamT form-control">
+            <input type="number" placeholder="Piso" class="pisoSalonViernesTeamT form-control"><br><br>
+            </div>
+            <button type="button" class="previous2T btn btn-light">Previous</button>
+            <button type="button" class="next2T btn btn-light">Siguiente</button>
+            </div>
+            <div class="nivelesTrainers">
+            <h2>Niveles</h2>
+            <label for=".tecnologiaInputT" class="form-label text-light fs-4">Tecnologia a la que pertenece:</label>
+            <input type="text" placolder="tecnologia:" class="tecnologiaInputT form-control">
+            <select name="tecnologiaTipoT" id="tecnologiaTipoT" class="form-select">
+                <option selected disabled>Tipo de tecnología</option>
+                <option value="Remota">Remota</option>
+                <option value="Presencial">Presencial</option>
+            </select><BR></BR>
+            <button type="button" class="previous3T btn btn-light">Previous</button>
+            <input type="submit" placeholder="Enviar" class="enviarT btn btn-light">
+            </div>
+        </form>
+    </div>
+    </section>
+    <section class="sedesSection">
+        <div class="container4">
+        <form id="formSedes">
+            <label for=".ciudadSede" class="form-label text-light fs-4">Ingrese la ciudad de la sede:</label>
+            <input type="text" placeholder="Ciudad:" class="ciudadSede form-control"><br>
+            <label for=".direccionSede" class="form-label text-light fs-4">Ingrese la dirección de la sede:</label>
+            <input type="text" placeholder="Dirección:" class="direccionSede form-control"><br>
+            <label for=".telefonoSede" class="form-label text-light fs-4">Ingrese el teléfono de la sede:</label>
+            <input type="tel" placeholder="Teléfono:" class="telefonoSede form-control"><br><br>
+            <button class="previousS btn btn-light">Volver</button>
+            <button type="submit" class="enviarSede btn btn-light">Enviar</button>
+        </form>
+        </div>
+    </section>
+    <section class="nivelesSection">
+        <div class="container5">
+        <form class="formNiveles">
+            <label for=".nivel" class="form-label text-light fs-4">Ingrese el nuevo nivel:</label>
+            <input type="text" placeholder="nivel" class="nivel form-control"><br>
+            <label for=".prerrequisito" class="form-label text-light fs-4">Ingrese su prerrequisito:</label>
+            <input type="text" placeholder="Prerrequisitos:" class="prerrequisito form-control"><br>
+            <label for=".tecnologiaNivel" class="form-label text-light fs-4">Ingrese la tecnología a la que pertenece:</label>
+            <input type="text" placeholder="Tecnología:" class="tecnologiaNivel form-control">
+            <select name="tipoTecnologiaNivel" id="tipoTecnologiaNivel" class="form-select">
+                <option selected disabled>Tipo</option>
+                <option value="Electiva">Electiva</option>
+                <option value="Obligatoria">Obligatoria</option>
+            </select><br>
+            <button class="previousN btn btn-light">Volver</button>
+            <button type="submit" class="enviarNivel btn btn-light">Enviar</button>
+        </form>
+        </div>
+    </section>
+    <section class="tecnologiasSection">
+        <div class="container6">
+        <form class="formTecnologias">
+            <label for=".tecnologia" class="form-label text-light fs-4">Ingrese la nueva tecnología:</label>
+            <input type="text" placeholder="Tecnologías" class="tecnologia form-control"><br>
+            <label for=".tipoTecnologia" class="form-label text-light fs-4">Ingrese el tipo de tecnología:</label>
+            <select name="tipoTecnologia" id="tipoTecnologia" class="form-select">
+                <option selected disabled>opción</option>
+                <option value="Electiva">Electiva</option>
+                <option value="Obligatoria">Obligatoria</option>
+            </select><br>
+            <label for=".modalidadTecnologia" class="form-label text-light fs-4">Ingrese la modalidad de la tecnología:</label>
+            <select name="modalidadTecnologia" id="modalidadTecnologia" class="form-select">
+                <option selected disabled>opción</option>
+                <option value="Presencial">Presencial</option>
+                <option value="Remota">Remota</option>
+            </select><br>
+            <label for="#sandbox" class="form-label text-light fs-4">¿Tiene sandbox?</label>
+            <select name="sandbox" id="sandbox" class="form-select">
+                <option selected disabled>opción</option>
+                <option value="si">Tiene Sandbox</option>
+                <option value="no">No tiene Sandbox</option>
+            </select><br>
+            <button class="previousT btn btn-light">Volver</button>
+            <button type="submit" class="enviarTecnologia btn btn-light">Enviar</button>
+        </form>
+        </div>
+    </section>
+    <section class="teamsSection">
+        <div class="container7">
+        <form class="formTeams">
+            <label for=".nivel" class="form-label text-light fs-4">Ingrese un nuevo team:</label>
+            <input type="number" placeholder="Team" class="team form-control"><br>
+            <h2>Horario:</h2>
+            <H3>Lunes</H3>
+            <label for=".horaTeam" class="form-label text-light fs-4">Ingrese la hora del día lunes:</label>
+            <input type="time" placeholder="Hora" class="horaLunesTeam form-control"><br>
+            <label class="form-label text-light fs-4">Salón:</label>
+            <input type="number" placeholder="Número" class="numeroSalonLunesTeam form-control">
+            <input type="number" placeholder="Piso" class="pisoSalonLunesTeam form-control"><br>
+
+            <H3>Martes</H3>
+            <label for=".horaTeam" class="form-label text-light fs-4">Ingrese la hora del día martes:</label>
+            <input type="time" placeholder="Hora" class="horaMartesTeam form-control"><br>
+            <label class="form-label text-light fs-4">Salón:</label>
+            <input type="number" placeholder="Número" class="numeroSalonMartesTeam form-control">
+            <input type="number" placeholder="Piso" class="pisoSalonMartesTeam form-control"><br>
+
+            <H3>Miercoles</H3>
+            <label for=".horaTeam" class="form-label text-light fs-4">Ingrese la hora del día miercoles:</label>
+            <input type="time" placeholder="Hora" class="horaMiercolesTeam form-control"><br>
+            <label class="form-label text-light fs-4">Salón:</label>
+            <input type="number" placeholder="Número" class="numeroSalonMiercolesTeam form-control">
+            <input type="number" placeholder="Piso" class="pisoSalonMiercolesTeam form-control"><br>
+
+            <H3>Jueves</H3>
+            <label for=".horaTeam" class="form-label text-light fs-4">Ingrese la hora del día jueves:</label>
+            <input type="time" placeholder="Hora" class="horaJuevesTeam form-control"><br>
+            <label class="form-label text-light fs-4">Salón:</label>
+            <input type="number" placeholder="Número" class="numeroSalonJuevesTeam form-control">
+            <input type="number" placeholder="Piso" class="pisoSalonJuevesTeam form-control"><br>
+
+            <H3>Viernes</H3>
+            <label for=".horaTeam" class="form-label text-light fs-4">Ingrese la hora del día viernes:</label>
+            <input type="time" placeholder="Hora" class="horaViernesTeam form-control"><br>
+            <label class="form-label text-light fs-4">Salón:</label>
+            <input type="number" placeholder="Número" class="numeroSalonViernesTeam form-control">
+            <input type="number" placeholder="Piso" class="pisoSalonViernesTeam form-control"><br><br>
+
+            <button class="previousTeam btn btn-light">Volver</button>
+            <button type="submit" class="enviarTeam btn btn-light">Enviar</button>
+        </form>
+        </div>
+    </section>
+    <section class="roadMapSection">
+        <div class="container8">
+        <form class="formRM">
+            <label for=".roadMap" class="form-label text-light fs-4">Ingrese la nueva Road Map:</label>
+            <input type="text" placeholder="Road Map:" class="roadMap form-control"><br>
+            <label for=".creditosRM" class="form-label text-light fs-4">Ingrese los créditos que tendrá:</label>
+            <input type="number" placeholder="Créditos:" class="creditosRM form-control"><br>
+            <label for=".añoRM" class="form-label text-light fs-4">Ingrese el año de la nueva roadMap</label>
+            <input type="number" placeholder="Año:" class="añoRM form-control"><br>
+            <label for=".asignaturasRM" class="form-label text-light fs-4">Ingrese cuántas asignaturas tendrá:</label>
+            <input type="number" placeholder="Asignaturas:" class="asignaturasRM form-control"><br>
+            <button class="previousR btn btn-light">Volver</button>
+            <button type="submit" class="enviarRM btn btn-light">Enviar</button>
+        </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url(./img/fondo.jpg);
+    background-size: cover;
+}
+
+.contactoCampers, .campusCampers, .nivelesCampers, .contactoTrainers, .campusTrainers, .nivelesTrainers, .contacto, .sedesSection, .nivelesSection, .tecnologiasSection, .teamsSection, .roadMapSection{
+    display:none;
+}
+
+.softwareSkills, .claseIngles, .claseSer{
+    display:none;
+}
+
+.lunesC, .martesC, .miercolesC, .juevesC, .viernesC, .lunesIC, .martesIC, .miercolesIC, .juevesIC, .viernesIC, .lunesSC, .martesSC, .miercolesSC, .juevesSC, .viernesSC, .lunesT, .martesT, .miercolesT, .juevesT, .viernesT{
+    display:none;
+}
+
+.diasC, .diasIC, .diasSC{
+    display:none;
+}
+/*PRIMERA SECCIÓN*/
+
+.containerFirst, .container2, .container3, .container4, .container5, .container6, .container7, .container8{
+    margin-left: 625px;
+    margin-top: 250px;
+}
+
+
+.containerFirst h2, .container2 h2, .container3 h2, .container4 h2, .container5 h2, .container6 h2, .container7 h2, .container8 h2{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: -666px;
+    color: rgb(240, 233, 220);
+    font-size: 50px;
+}
+
+.container3 h3{
+    color: rgb(0, 136, 255);
+
+}
+
+.form-select{
+    width:250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-control{
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
